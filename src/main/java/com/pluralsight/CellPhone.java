@@ -2,7 +2,7 @@ package com.pluralsight;
 
 public class CellPhone {
 
-    // Fields: private data
+    // Fields: private data (properties)
     private int serialNumber;
     private String model;
     private String carrier;
@@ -12,7 +12,7 @@ public class CellPhone {
 
     // Constructors: no params
     public CellPhone() {
-        this.serialNumber =0;
+        this.serialNumber = 0;
         this.model = "";
         this.carrier = "";
         this.phoneNumber = "";
@@ -20,14 +20,6 @@ public class CellPhone {
 
     }
 
-    // Constructor: 5 params
-    public CellPhone(int serialNumber, String model, String carrier, String phoneNumber, String owner) {
-        this.serialNumber = serialNumber;
-        this.model = model;
-        this.carrier = carrier;
-        this.phoneNumber = phoneNumber;
-        this.owner = owner;
-    }
 
     // Getters: take a value OUT
     public int getSerialNumber() {
