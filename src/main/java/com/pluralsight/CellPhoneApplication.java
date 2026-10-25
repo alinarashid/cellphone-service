@@ -28,12 +28,21 @@ public class CellPhoneApplication {
 
 
         // Phone 2: a second, separate object from the same blueprint
+        System.out.println("\nEnter info for phone 2:");
         CellPhone cellPhone2 = new CellPhone();
         cellPhone2.setSerialNumber(Integer.parseInt(askQuestion("What is the serial number? ")));
         cellPhone2.setModel(askQuestion("What model is the phone? "));
         cellPhone2.setCarrier(askQuestion("Who is the carrier? "));
         cellPhone2.setPhoneNumber(askQuestion("What is the phone number? "));
         cellPhone2.setOwner(askQuestion("Who is the owner of the phone? "));
+
+        // Phone 3: Exercise 3
+        CellPhone cellPhone3 = new CellPhone( 5551234, "Galaxy S24","T-Mobile","800-555-7777","Alina");
+
+        // Display phone 3
+        display(cellPhone3);
+
+
 
         // Same display method, used for each phone
         display(cellPhone1);
@@ -43,6 +52,9 @@ public class CellPhoneApplication {
         System.out.println();
         cellPhone1.dial(cellPhone2.getPhoneNumber());
         cellPhone2.dial(cellPhone1.getPhoneNumber());
+
+        // Exercise 3
+        cellPhone1.dial(cellPhone3.getPhoneNumber());
     }
 
     // Helper: shows a prompt, reads the answer, returns it trimmed.

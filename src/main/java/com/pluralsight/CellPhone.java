@@ -26,6 +26,14 @@ public class CellPhone {
 
     }
 
+    // Overloaded constructor
+    public CellPhone(int serialNumber, String model, String carrier, String phoneNumber, String owner) {
+        this.serialNumber = serialNumber;
+        this.model = model;
+        this.carrier = carrier;
+        this.phoneNumber = phoneNumber;
+        this.owner = owner;
+    }
 
     // Getters: read a field's value from outside the class
     public int getSerialNumber() {
